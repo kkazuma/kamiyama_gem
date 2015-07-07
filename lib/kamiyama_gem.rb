@@ -8,10 +8,10 @@ module KamiyamaGem
 		today = day.strftime("%m%d")
 		my_year = my_birth[0, 4]
 		my_day = my_birth[4, 4]
-		if today.to_i > my_day.to_i then
-			years = (today_year.to_i) - (my_year.to_i) 
+		if today.to_i >= my_day.to_i-1 then
+			years = (today_year.to_i) - (my_year.to_i) + 1
 		else
-			years = (today_year.to_i) - (my_year.to_i) + 1	
+			years = (today_year.to_i) - (my_year.to_i)	
 		end
 		print("あなたの年齢は#{years}歳です")
 		# return years
